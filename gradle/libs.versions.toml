@@ -1,0 +1,25 @@
+[versions]
+#plugin_mixin = "0.7.+"
+plugin_forge = "6.0.+"
+plugin_parchmentmc = "1.+"
+
+
+minecraft = "1.20.1"
+minecraftForge = "1.20.1-47.3.7"
+forge = "47.3.7"
+parchmentmc = "2023.09.03"
+
+jei = "15.12.3.55"
+modularRouters = "5056687"
+
+[libraries]
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
+minecraftForge = { module = "net.minecraftforge:forge", version.ref = "minecraftForge" }
+
+jei = { module = "mezz.jei:jei-1.20.1-forge", version.ref = "jei" }
+modularRouters = { module = "curse.maven:modular-routers-250294", version.ref = "modularRouters" }
+
+
+[plugins]
+forge = { id = "net.minecraftforge.gradle", version.ref = "plugin_forge" }
+parchmentmc = { id = "org.parchmentmc.librarian.forgegradle", version.ref = "plugin_parchmentmc" }
