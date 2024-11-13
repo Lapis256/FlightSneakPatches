@@ -9,21 +9,23 @@ function initializeCoreMod() {
     return {
         "flight_sneak_patches": {
             "target": {
-                "type": "CLASS",
-                "names": function (_) {
+                "type": "CLASS", "names": function (_) {
                     return [
                         "me.desht.modularrouters.item.module.ModuleItem",
-                        "me.desht.modularrouters.item.module.TargetedModule"
+                        "me.desht.modularrouters.item.module.TargetedModule",
+                        "thetadev.constructionwand.client.RenderBlockPreview",
+                        "thetadev.constructionwand.client.ClientEvents",
+                        "thetadev.constructionwand.items.wand.ItemWand"
                     ];
                 }
             },
             "transformer": function (classNode) {
                 var methods = classNode.methods;
-                for(var i = 0; i < methods.size(); i++){
+                for (var i = 0; i < methods.size(); i++) {
                     var method = methods.get(i);
-                    var instruction = method.instructions;
-                    for(var j = 0; j < instruction.size(); j++){
-                        var node = instruction.get(j);
+                    var instructions = method.instructions;
+                    for (var j = 0; j < instructions.size(); j++) {
+                        var node = instructions.get(j);
                         if (node.getOpcode() === Opcodes.INVOKEVIRTUAL && node.name === targetMethod) {
                             node.name = replacementMethod;
                             ASMAPI.log("INFO", "Replaced isCrouching to isShiftKeyDown in " + classNode.name + "#" + method.name);

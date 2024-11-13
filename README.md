@@ -7,6 +7,7 @@ This mod is a patch that fixes issues where actions requiring sneaking, added by
 ### Supported Mods
 
 - [Modular Routers](https://www.curseforge.com/minecraft/mc-mods/modular-routers)
+- [Construction Wand](https://www.curseforge.com/minecraft/mc-mods/construction-wand)
 
 ## Attribution
 

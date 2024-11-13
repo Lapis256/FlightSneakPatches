@@ -78,6 +78,7 @@ dependencies {
     minecraft(libs.minecraftForge)
 
     implementation(deobf(libs.modularRouters))
+    implementation(deobf(libs.constructionWand))
 
     runtimeOnly(deobf(libs.jei))
 }
