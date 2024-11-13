@@ -12,4 +12,11 @@ displayURL ="${display_url}"
 displayTest = "${display_test}"
 authors = "${mod_author}"
 description = '''${description}'''
-${dependencies}
+[[dependencies.${mod_id}]]
+modId="forge"
+mandatory=true
+versionRange="${mod_loader_version_range}"
+[[dependencies.${mod_id}]]
+modId="minecraft"
+mandatory=true
+versionRange="${minecraft_version_range}"

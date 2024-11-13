@@ -7,7 +7,6 @@ plugins {
     id("idea")
 
     alias(libs.plugins.forge)
-//    alias(libs.plugins.mixin)
     alias(libs.plugins.parchmentmc)
 }
 
@@ -18,7 +17,7 @@ val jdkVersion = 17
 
 
 base {
-    archivesName = "${project.name}-$minecraftVersion"
+    archivesName = project.name
     version = Constants.Mod.version
     group = Constants.Mod.group
 }
@@ -36,10 +35,6 @@ minecraft {
                 mapOf(
                     "forge.logging.markers" to "REGISTRIES", "forge.logging.console.level" to "debug"
                 )
-            )
-
-            jvmArgs(
-                "-XX:+AllowEnhancedClassRedefinition"
             )
 
             mods {
@@ -87,11 +82,6 @@ dependencies {
     runtimeOnly(deobf(libs.jei))
 }
 
-val modDependencies = buildDeps(
-    ModDep("forge", forgeMajorVersion),
-    ModDep("minecraft", minecraftVersion)
-)
-
 tasks {
     withType<JavaCompile> {
         options.encoding = "UTF-8"
@@ -99,7 +89,6 @@ tasks {
     }
 
     java {
-        withSourcesJar()
         toolchain {
             languageVersion = JavaLanguageVersion.of(jdkVersion)
             vendor = JvmVendorSpec.JETBRAINS
@@ -116,7 +105,8 @@ tasks {
             "group" to Constants.Mod.group,
             "minecraft_version" to minecraftVersion,
             "mod_loader" to "lowcodefml",
-            "mod_loader_version_range" to "[$forgeMajorVersion,)",
+            "mod_loader_version_range" to "[38,54)",
+            "minecraft_version_range" to "[1.18,1.21.4)",
             "mod_name" to Constants.Mod.name,
             "mod_author" to Constants.Mod.author,
             "mod_id" to Constants.Mod.id,
@@ -126,8 +116,6 @@ tasks {
             "display_url" to Constants.Mod.repositoryUrl,
             "display_test" to DisplayTest.IGNORE_SERVER_VERSION.toString(),
             "issue_tracker_url" to Constants.Mod.issueTrackerUrl,
-
-            "dependencies" to modDependencies
         )
 
         filesMatching(listOf("pack.mcmeta", "META-INF/mods.toml")) {
@@ -157,12 +145,6 @@ tasks {
         }
 
         finalizedBy("reobfJar")
-    }
-
-    named<Jar>("sourcesJar") {
-        from(rootProject.file("LICENSE")) {
-            rename { "LICENSE_${Constants.Mod.id}" }
-        }
     }
 }
 
