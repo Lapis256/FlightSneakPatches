@@ -11,6 +11,7 @@ parchmentmc = "2023.09.03"
 jei = "15.12.3.55"
 modularRouters = "5056687"
 constructionWand = "4684054"
+morphOTool = "5605503"
 
 
 [libraries]
@@ -20,6 +21,7 @@ minecraftForge = { module = "net.minecraftforge:forge", version.ref = "minecraft
 jei = { module = "mezz.jei:jei-1.20.1-forge", version.ref = "jei" }
 modularRouters = { module = "curse.maven:modular-routers-250294", version.ref = "modularRouters" }
 constructionWand = { module = "curse.maven:construction-wand-399558", version.ref = "constructionWand" }
+morphOTool = { module = "curse.maven:morph-o-tool-245287", version.ref = "morphOTool" }
 
 
 [plugins]

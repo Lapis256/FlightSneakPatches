@@ -15,7 +15,9 @@ function initializeCoreMod() {
                         "me.desht.modularrouters.item.module.TargetedModule",
                         "thetadev.constructionwand.client.RenderBlockPreview",
                         "thetadev.constructionwand.client.ClientEvents",
-                        "thetadev.constructionwand.items.wand.ItemWand"
+                        "thetadev.constructionwand.items.wand.ItemWand",
+                        "vazkii.morphtool.ClientHandler",
+                        "vazkii.morphtool.MorphingHandler"
                     ];
                 }
             },

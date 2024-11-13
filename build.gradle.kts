@@ -79,6 +79,7 @@ dependencies {
 
     implementation(deobf(libs.modularRouters))
     implementation(deobf(libs.constructionWand))
+    implementation(deobf(libs.morphOTool))
 
     runtimeOnly(deobf(libs.jei))
 }
