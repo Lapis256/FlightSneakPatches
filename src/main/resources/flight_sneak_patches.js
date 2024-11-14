@@ -21,7 +21,8 @@ function initializeCoreMod() {
                         "vazkii.morphtool.MorphingHandler",
                         "net.gigabit101.shrink.items.ItemShrinkingDevice",
                         "ironfurnaces.blocks.furnaces.BlockIronFurnaceBase",
-                        "ironfurnaces.items.ItemFurnaceCopy"
+                        "ironfurnaces.items.ItemFurnaceCopy",
+                        "elucent.eidolon.common.item.SummoningStaffItem"
                     ];
                 }
             },

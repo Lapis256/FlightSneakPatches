@@ -14,6 +14,8 @@ constructionWand = "4684054"
 morphOTool = "5605503"
 shrink = "4863339"
 ironFurnaces = "5159498"
+curios = "4834490"
+eidolonRepraised = "5877358"
 
 
 [libraries]
@@ -26,6 +28,8 @@ constructionWand = { module = "curse.maven:construction-wand-399558", version.re
 morphOTool = { module = "curse.maven:morph-o-tool-245287", version.ref = "morphOTool" }
 shrink = { module = "curse.maven:shrink-426386", version.ref = "shrink" }
 ironFurnaces = { module = "curse.maven:iron-furnaces-237664", version.ref = "ironFurnaces" }
+curios = { module = "curse.maven:curios-309927", version.ref = "curios" }
+eidolonRepraised = { module = "curse.maven:eidolon-repraised-870250", version.ref = "eidolonRepraised" }
 
 
 [plugins]
@@ -39,5 +43,7 @@ runtimeOnly = [
     "constructionWand",
     "morphOTool",
     "shrink",
-    "ironFurnaces"
+    "ironFurnaces",
+    "curios",
+    "eidolonRepraised"
 ]

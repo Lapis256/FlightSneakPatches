@@ -33,7 +33,11 @@ minecraft {
 
             properties(
                 mapOf(
-                    "forge.logging.markers" to "REGISTRIES", "forge.logging.console.level" to "debug"
+                    "forge.logging.markers" to "REGISTRIES",
+                    "forge.logging.console.level" to "debug",
+                    "forge.enabledGameTestNamespaces" to modId,
+                    "mixin.env.remapRefMap" to "true",
+                    "mixin.env.refMapRemappingFile" to "${projectDir}/build/createSrgToMcp/output.srg"
                 )
             )
 

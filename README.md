@@ -13,6 +13,7 @@ This mod is a patch that fixes issues where actions requiring sneaking, added by
 - [Morph-o-Tool](https://www.curseforge.com/minecraft/mc-mods/morph-o-tool)
 - [Shrink.](https://www.curseforge.com/minecraft/mc-mods/shrink_)
 - [Iron Furnaces](https://www.curseforge.com/minecraft/mc-mods/iron-furnaces)
+- [Eidolon: Repraised](https://www.curseforge.com/minecraft/mc-mods/eidolon-repraised)
 
 ## Attribution
 
