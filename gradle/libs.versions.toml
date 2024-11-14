@@ -13,6 +13,7 @@ modularRouters = "5056687"
 constructionWand = "4684054"
 morphOTool = "5605503"
 shrink = "4863339"
+ironFurnaces = "5159498"
 
 
 [libraries]
@@ -24,6 +25,7 @@ modularRouters = { module = "curse.maven:modular-routers-250294", version.ref = 
 constructionWand = { module = "curse.maven:construction-wand-399558", version.ref = "constructionWand" }
 morphOTool = { module = "curse.maven:morph-o-tool-245287", version.ref = "morphOTool" }
 shrink = { module = "curse.maven:shrink-426386", version.ref = "shrink" }
+ironFurnaces = { module = "curse.maven:iron-furnaces-237664", version.ref = "ironFurnaces" }
 
 
 [plugins]
@@ -36,5 +38,6 @@ runtimeOnly = [
     "modularRouters",
     "constructionWand",
     "morphOTool",
-    "shrink"
+    "shrink",
+    "ironFurnaces"
 ]

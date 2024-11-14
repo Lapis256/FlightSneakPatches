@@ -19,7 +19,9 @@ function initializeCoreMod() {
                         "thetadev.constructionwand.items.wand.ItemWand",
                         "vazkii.morphtool.ClientHandler",
                         "vazkii.morphtool.MorphingHandler",
-                        "net.gigabit101.shrink.items.ItemShrinkingDevice"
+                        "net.gigabit101.shrink.items.ItemShrinkingDevice",
+                        "ironfurnaces.blocks.furnaces.BlockIronFurnaceBase",
+                        "ironfurnaces.items.ItemFurnaceCopy"
                     ];
                 }
             },
