@@ -11,6 +11,7 @@ This mod is a patch that fixes issues where actions requiring sneaking, added by
 - [Modular Routers](https://www.curseforge.com/minecraft/mc-mods/modular-routers)
 - [Construction Wand](https://www.curseforge.com/minecraft/mc-mods/construction-wand)
 - [Morph-o-Tool](https://www.curseforge.com/minecraft/mc-mods/morph-o-tool)
+- [Shrink.](https://www.curseforge.com/minecraft/mc-mods/shrink_)
 
 ## Attribution
 

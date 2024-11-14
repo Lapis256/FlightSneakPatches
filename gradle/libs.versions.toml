@@ -12,6 +12,7 @@ jei = "15.12.3.55"
 modularRouters = "5056687"
 constructionWand = "4684054"
 morphOTool = "5605503"
+shrink = "4863339"
 
 
 [libraries]
@@ -22,8 +23,18 @@ jei = { module = "mezz.jei:jei-1.20.1-forge", version.ref = "jei" }
 modularRouters = { module = "curse.maven:modular-routers-250294", version.ref = "modularRouters" }
 constructionWand = { module = "curse.maven:construction-wand-399558", version.ref = "constructionWand" }
 morphOTool = { module = "curse.maven:morph-o-tool-245287", version.ref = "morphOTool" }
+shrink = { module = "curse.maven:shrink-426386", version.ref = "shrink" }
 
 
 [plugins]
 forge = { id = "net.minecraftforge.gradle", version.ref = "plugin_forge" }
 parchmentmc = { id = "org.parchmentmc.librarian.forgegradle", version.ref = "plugin_parchmentmc" }
+
+[bundles]
+runtimeOnly = [
+    "jei",
+    "modularRouters",
+    "constructionWand",
+    "morphOTool",
+    "shrink"
+]

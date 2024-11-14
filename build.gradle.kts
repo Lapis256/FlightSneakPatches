@@ -48,16 +48,12 @@ minecraft {
             taskName("Forge Client")
 
             workingDirectory(project.file("run"))
-
-            property("forge.enabledGameTestNamespaces", modId)
         }
 
         create("server") {
             taskName("Forge Server")
 
             workingDirectory(project.file("run-server"))
-
-            property("forge.enabledGameTestNamespaces", modId)
         }
     }
 }
@@ -77,11 +73,7 @@ repositories {
 dependencies {
     minecraft(libs.minecraftForge)
 
-    implementation(deobf(libs.modularRouters))
-    implementation(deobf(libs.constructionWand))
-    implementation(deobf(libs.morphOTool))
-
-    runtimeOnly(deobf(libs.jei))
+    libs.bundles.runtimeOnly.get().forEach { runtimeOnly(deobf(it)) }
 }
 
 tasks {
@@ -150,4 +142,5 @@ tasks {
     }
 }
 
-fun deobf(dependency: Provider<MinimalExternalModuleDependency>) = fg.deobf(dependency.get())
+fun deobf(dependency: Provider<MinimalExternalModuleDependency>) = deobf(dependency.get())
+fun deobf(dependency: MinimalExternalModuleDependency) = fg.deobf(dependency)

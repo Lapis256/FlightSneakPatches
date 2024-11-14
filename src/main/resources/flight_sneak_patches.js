@@ -9,7 +9,8 @@ function initializeCoreMod() {
     return {
         "flight_sneak_patches": {
             "target": {
-                "type": "CLASS", "names": function (_) {
+                "type": "CLASS",
+                "names": function (_) {
                     return [
                         "me.desht.modularrouters.item.module.ModuleItem",
                         "me.desht.modularrouters.item.module.TargetedModule",
@@ -17,7 +18,8 @@ function initializeCoreMod() {
                         "thetadev.constructionwand.client.ClientEvents",
                         "thetadev.constructionwand.items.wand.ItemWand",
                         "vazkii.morphtool.ClientHandler",
-                        "vazkii.morphtool.MorphingHandler"
+                        "vazkii.morphtool.MorphingHandler",
+                        "net.gigabit101.shrink.items.ItemShrinkingDevice"
                     ];
                 }
             },
